@@ -1,0 +1,221 @@
+# Monday.com Barcode Generator - Git Ignore File
+
+# ==============================================
+# ENVIRONMENT & SECRETS
+# ==============================================
+.env
+.env.local
+.env.production
+.env.staging
+.env.*.local
+secrets.json
+
+# ==============================================
+# NODE.JS & NPM
+# ==============================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.npm
+.eslintcache
+.node_repl_history
+*.tgz
+.yarn-integrity
+.pnp.*
+
+# ==============================================
+# LOGS
+# ==============================================
+logs/
+*.log
+log/
+pids
+*.pid
+*.seed
+*.pid.lock
+lib-cov
+coverage/
+.nyc_output
+.grunt
+bower_components
+
+# ==============================================
+# RUNTIME & TEMPORARY FILES
+# ==============================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+.tmp/
+temp/
+tmp/
+
+# ==============================================
+# DEVELOPMENT TOOLS
+# ==============================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+.sublime-project
+.sublime-workspace
+
+# ==============================================
+# BUILD & DISTRIBUTION
+# ==============================================
+dist/
+build/
+out/
+.next/
+.nuxt/
+.cache/
+.parcel-cache/
+
+# ==============================================
+# DATABASE & STORAGE
+# ==============================================
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+data/
+uploads/
+storage/
+
+# ==============================================
+# TESTING
+# ==============================================
+coverage/
+.nyc_output/
+test-results/
+junit.xml
+*.lcov
+
+# ==============================================
+# DEPENDENCIES & PACKAGE MANAGERS
+# ==============================================
+node_modules/
+jspm_packages/
+.pnp/
+.pnp.js
+package-lock.json
+yarn.lock
+.yarn/
+
+# ==============================================
+# OPERATING SYSTEM FILES
+# ==============================================
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ==============================================
+# SSL & CERTIFICATES
+# ==============================================
+*.pem
+*.key
+*.crt
+*.csr
+ssl/
+certificates/
+
+# ==============================================
+# DEPLOYMENT & CI/CD
+# ==============================================
+.serverless/
+.aws/
+.gcp/
+.azure/
+deploy.sh
+Dockerfile.local
+docker-compose.override.yml
+
+# ==============================================
+# BACKUP FILES
+# ==============================================
+*.backup
+*.bak
+*.orig
+backup/
+backups/
+
+# ==============================================
+# MONDAY.COM SPECIFIC
+# ==============================================
+monday-credentials.json
+monday-tokens.json
+.monday-cache/
+
+# ==============================================
+# GENERATED BARCODES (for future implementation)
+# ==============================================
+generated-barcodes/
+barcode-exports/
+*.png
+*.jpg
+*.jpeg
+*.svg
+!public/images/logo.png
+
+# ==============================================
+# DOCUMENTATION BUILDS
+# ==============================================
+docs/build/
+api-docs/
+.docusaurus/
+
+# ==============================================
+# MISC
+# ==============================================
+.sass-cache/
+.connect.lock
+.grunt
+.lock-wscript
+.tern-project
+.tern-port
+.vscode-test
+.history/
+.ionide/ 
+.mappsrc

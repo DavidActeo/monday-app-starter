@@ -1,0 +1,330 @@
+{
+  "version": "1.0.0",
+  "type": "monday-app",
+  "name": "Barcode Generator for Monday.com",
+  "description": "Professional barcode generator that creates QR codes, Code 128, EAN-13, EAN-8, UPC-A, Code 39, and DataMatrix barcodes from your Monday.com board data. Perfect for inventory management, product tracking, and document processing.",
+  "shortDescription": "Generate professional barcodes from Monday.com column data",
+  "icon": "https://cdn.monday.com/icons/barcode.png",
+  "categories": ["productivity", "data-management", "automation"],
+  "tags": ["barcode", "qr-code", "inventory", "tracking", "automation", "files"],
+  "features": {
+    "actions": [
+      {
+        "id": "create_qr_code",
+        "name": "Create QR Code",
+        "description": "Generate QR codes from any text, number, or URL in your Monday.com columns. Perfect for sharing links, contact info, or product details.",
+        "type": "action",
+        "run": {
+          "endpoint": "https://e26a1-service-30568196-f0fc38bd.us.monday.app/api/actions/create-qr-code"
+        },
+        "inputs": [
+          {
+            "id": "boardId",
+            "name": "Board",
+            "description": "The board containing the item",
+            "type": "board",
+            "required": true
+          },
+          {
+            "id": "itemId",
+            "name": "Item",
+            "description": "The item to generate barcode for",
+            "type": "item",
+            "required": true
+          },
+          {
+            "id": "sourceColumnId",
+            "name": "Source Column",
+            "description": "Column containing data to encode in QR code",
+            "type": "column",
+            "required": true,
+            "field_definitions_url": "https://e26a1-service-30568196-f0fc38bd.us.monday.app/api/monday/fetchFieldDefs?field=sourceColumnId"
+          },
+          {
+            "id": "targetFileColumnId",
+            "name": "Target File Column",
+            "description": "File column to save QR code image",
+            "type": "column",
+            "required": true,
+            "field_definitions_url": "https://e26a1-service-30568196-f0fc38bd.us.monday.app/api/monday/fetchFieldDefs?field=targetFileColumnId"
+          }
+        ]
+      },
+      {
+        "id": "create_code128",
+        "name": "Create Code 128",
+        "description": "Generate Code 128 barcodes for inventory tracking, shipping labels, and warehouse management. Supports alphanumeric data.",
+        "type": "action",
+        "run": {
+          "endpoint": "https://e26a1-service-30568196-f0fc38bd.us.monday.app/api/actions/create-code128"
+        },
+        "inputs": [
+          {
+            "id": "boardId",
+            "name": "Board",
+            "description": "The board containing the item",
+            "type": "board",
+            "required": true
+          },
+          {
+            "id": "itemId",
+            "name": "Item",
+            "description": "The item to generate barcode for",
+            "type": "item",
+            "required": true
+          },
+          {
+            "id": "sourceColumnId",
+            "name": "Source Column",
+            "description": "Column containing data to encode in Code 128 barcode",
+            "type": "column",
+            "required": true,
+            "field_definitions_url": "https://e26a1-service-30568196-f0fc38bd.us.monday.app/api/monday/fetchFieldDefs?field=sourceColumnId"
+          },
+          {
+            "id": "targetFileColumnId",
+            "name": "Target File Column",
+            "description": "File column to save Code 128 barcode image",
+            "type": "column",
+            "required": true,
+            "field_definitions_url": "https://e26a1-service-30568196-f0fc38bd.us.monday.app/api/monday/fetchFieldDefs?field=targetFileColumnId"
+          }
+        ]
+      },
+      {
+        "id": "create_ean13",
+        "name": "Create EAN-13",
+        "description": "Generate EAN-13 barcodes for retail products, books, and international trade. Standard format for product labeling worldwide.",
+        "type": "action",
+        "run": {
+          "endpoint": "https://e26a1-service-30568196-f0fc38bd.us.monday.app/api/actions/create-ean13"
+        },
+        "inputs": [
+          {
+            "id": "boardId",
+            "name": "Board",
+            "description": "The board containing the item",
+            "type": "board",
+            "required": true
+          },
+          {
+            "id": "itemId",
+            "name": "Item",
+            "description": "The item to generate barcode for",
+            "type": "item",
+            "required": true
+          },
+          {
+            "id": "sourceColumnId",
+            "name": "Source Column",
+            "description": "Column containing 13-digit number for EAN-13 barcode",
+            "type": "column",
+            "required": true,
+            "field_definitions_url": "https://e26a1-service-30568196-f0fc38bd.us.monday.app/api/monday/fetchFieldDefs?field=sourceColumnId"
+          },
+          {
+            "id": "targetFileColumnId",
+            "name": "Target File Column",
+            "description": "File column to save EAN-13 barcode image",
+            "type": "column",
+            "required": true,
+            "field_definitions_url": "https://e26a1-service-30568196-f0fc38bd.us.monday.app/api/monday/fetchFieldDefs?field=targetFileColumnId"
+          }
+        ]
+      },
+      {
+        "id": "create_ean8",
+        "name": "Create EAN-8",
+        "description": "Generate EAN-8 barcode from column value and save to file column",
+        "type": "action",
+        "run": {
+          "endpoint": "https://e26a1-service-30568196-f0fc38bd.us.monday.app/api/actions/create-ean8"
+        },
+        "inputs": [
+          {
+            "id": "boardId",
+            "name": "Board",
+            "description": "The board containing the item",
+            "type": "board",
+            "required": true
+          },
+          {
+            "id": "itemId",
+            "name": "Item",
+            "description": "The item to generate barcode for",
+            "type": "item",
+            "required": true
+          },
+          {
+            "id": "sourceColumnId",
+            "name": "Source Column",
+            "description": "Column containing 8-digit number for EAN-8 barcode",
+            "type": "column",
+            "required": true,
+            "field_definitions_url": "https://e26a1-service-30568196-f0fc38bd.us.monday.app/api/monday/fetchFieldDefs?field=sourceColumnId"
+          },
+          {
+            "id": "targetFileColumnId",
+            "name": "Target File Column",
+            "description": "File column to save EAN-8 barcode image",
+            "type": "column",
+            "required": true,
+            "field_definitions_url": "https://e26a1-service-30568196-f0fc38bd.us.monday.app/api/monday/fetchFieldDefs?field=targetFileColumnId"
+          }
+        ]
+      },
+      {
+        "id": "create_upc_a",
+        "name": "Create UPC-A",
+        "description": "Generate UPC-A barcode from column value and save to file column",
+        "type": "action",
+        "run": {
+          "endpoint": "https://e26a1-service-30568196-f0fc38bd.us.monday.app/api/actions/create-upc-a"
+        },
+        "inputs": [
+          {
+            "id": "boardId",
+            "name": "Board",
+            "description": "The board containing the item",
+            "type": "board",
+            "required": true
+          },
+          {
+            "id": "itemId",
+            "name": "Item",
+            "description": "The item to generate barcode for",
+            "type": "item",
+            "required": true
+          },
+          {
+            "id": "sourceColumnId",
+            "name": "Source Column",
+            "description": "Column containing 12-digit UPC-A code",
+            "type": "column",
+            "required": true,
+            "field_definitions_url": "https://e26a1-service-30568196-f0fc38bd.us.monday.app/api/monday/fetchFieldDefs?field=sourceColumnId"
+          },
+          {
+            "id": "targetFileColumnId",
+            "name": "Target File Column",
+            "description": "File column to save UPC-A barcode image",
+            "type": "column",
+            "required": true,
+            "field_definitions_url": "https://e26a1-service-30568196-f0fc38bd.us.monday.app/api/monday/fetchFieldDefs?field=targetFileColumnId"
+          }
+        ]
+      },
+      {
+        "id": "create_code39",
+        "name": "Create Code 39",
+        "description": "Generate Code 39 barcode from column value and save to file column",
+        "type": "action",
+        "run": {
+          "endpoint": "https://e26a1-service-30568196-f0fc38bd.us.monday.app/api/actions/create-code39"
+        },
+        "inputs": [
+          {
+            "id": "boardId",
+            "name": "Board",
+            "description": "The board containing the item",
+            "type": "board",
+            "required": true
+          },
+          {
+            "id": "itemId",
+            "name": "Item",
+            "description": "The item to generate barcode for",
+            "type": "item",
+            "required": true
+          },
+          {
+            "id": "sourceColumnId",
+            "name": "Source Column",
+            "description": "Column containing alphanumeric data for Code 39 barcode",
+            "type": "column",
+            "required": true,
+            "field_definitions_url": "https://e26a1-service-30568196-f0fc38bd.us.monday.app/api/monday/fetchFieldDefs?field=sourceColumnId"
+          },
+          {
+            "id": "targetFileColumnId",
+            "name": "Target File Column",
+            "description": "File column to save Code 39 barcode image",
+            "type": "column",
+            "required": true,
+            "field_definitions_url": "https://e26a1-service-30568196-f0fc38bd.us.monday.app/api/monday/fetchFieldDefs?field=targetFileColumnId"
+          }
+        ]
+      },
+      {
+        "id": "create_datamatrix",
+        "name": "Create DataMatrix",
+        "description": "Generate DataMatrix barcode from column value and save to file column",
+        "type": "action",
+        "run": {
+          "endpoint": "https://e26a1-service-30568196-f0fc38bd.us.monday.app/api/actions/create-datamatrix"
+        },
+        "inputs": [
+          {
+            "id": "boardId",
+            "name": "Board",
+            "description": "The board containing the item",
+            "type": "board",
+            "required": true
+          },
+          {
+            "id": "itemId",
+            "name": "Item",
+            "description": "The item to generate barcode for",
+            "type": "item",
+            "required": true
+          },
+          {
+            "id": "sourceColumnId",
+            "name": "Source Column",
+            "description": "Column containing data to encode in DataMatrix barcode",
+            "type": "column",
+            "required": true,
+            "field_definitions_url": "https://e26a1-service-30568196-f0fc38bd.us.monday.app/api/monday/fetchFieldDefs?field=sourceColumnId"
+          },
+          {
+            "id": "targetFileColumnId",
+            "name": "Target File Column",
+            "description": "File column to save DataMatrix barcode image",
+            "type": "column",
+            "required": true,
+            "field_definitions_url": "https://e26a1-service-30568196-f0fc38bd.us.monday.app/api/monday/fetchFieldDefs?field=targetFileColumnId"
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "scopes": [
+      "boards:read",
+      "boards:write", 
+      "assets:read",
+      "me:read",
+      "updates:read",
+      "updates:write"
+    ]
+  },
+  "author": {
+    "name": "Barcode Generator Team",
+    "email": "support@barcodegenerator.app",
+    "website": "https://barcodegenerator.app"
+  },
+  "support": {
+    "email": "support@barcodegenerator.app",
+    "documentation": "https://barcodegenerator.app/docs",
+    "faq": "https://barcodegenerator.app/faq"
+  },
+  "pricing": {
+    "type": "free",
+    "plan": "Free forever with all features included"
+  },
+  "screenshots": [
+    "https://barcodegenerator.app/screenshots/qr-code-generation.png",
+    "https://barcodegenerator.app/screenshots/barcode-types.png",
+    "https://barcodegenerator.app/screenshots/automation-setup.png"
+  ]
+} 
