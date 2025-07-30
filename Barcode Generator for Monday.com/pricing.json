@@ -1,0 +1,76 @@
+{
+  "pricing_model": "seats",
+  "pricing_plans": [
+    {
+      "id": "trial",
+      "name": "Free Trial",
+      "description": "Full access to test all features",
+      "monthly_price": 0,
+      "yearly_price": 0,
+      "currency": "USD",
+      "min_seats": 1,
+      "max_seats": "unlimited",
+      "is_trial": true,
+      "trial_duration_days": 14,
+      "features": [
+        "All barcode types (QR, Code 128, EAN-13, EAN-8, UPC-A, Code 39, DataMatrix)",
+        "Unlimited barcode generation",
+        "Full feature access",
+        "14-day trial period",
+        "Basic support"
+      ]
+    },
+    {
+      "id": "basic",
+      "name": "Basic Plan",
+      "description": "Essential barcode generation for small teams",
+      "monthly_price": 299,
+      "yearly_price": 239,
+      "currency": "USD",
+      "min_seats": 1,
+      "max_seats": 25,
+      "features": [
+        "All barcode types (QR, Code 128, EAN-13, EAN-8, UPC-A, Code 39, DataMatrix)",
+        "Unlimited barcode generation",
+        "Basic support",
+        "Standard barcode sizes"
+      ]
+    },
+    {
+      "id": "professional",
+      "name": "Professional Plan", 
+      "description": "Advanced features for growing businesses",
+      "monthly_price": 599,
+      "yearly_price": 479,
+      "currency": "USD",
+      "min_seats": 1,
+      "max_seats": 100,
+      "features": [
+        "All barcode types (QR, Code 128, EAN-13, EAN-8, UPC-A, Code 39, DataMatrix)",
+        "Unlimited barcode generation",
+        "Priority support",
+        "Custom barcode sizes",
+        "Advanced settings",
+        "Integration support"
+      ]
+    },
+    {
+      "id": "enterprise",
+      "name": "Enterprise Plan",
+      "description": "Full-featured solution for large organizations",
+      "monthly_price": 999,
+      "yearly_price": 799,
+      "currency": "USD", 
+      "min_seats": 25,
+      "max_seats": "unlimited",
+      "features": [
+        "All Professional features",
+        "Advanced analytics and reporting",
+        "Custom integrations",
+        "Dedicated account manager",
+        "SLA guarantee",
+        "Premium support"
+      ]
+    }
+  ]
+}
